@@ -1,0 +1,9 @@
+---
+:orm: datamapper
+:test: none
+:mock: mocha
+:script: none
+:renderer: none
+:stylesheet: none
+:namespace: Moss
+:migration_format: number
