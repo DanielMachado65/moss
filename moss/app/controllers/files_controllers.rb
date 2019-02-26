@@ -25,6 +25,8 @@ Moss::App.controllers :files, provides: %i[json binary] do
 
     variables = cont_variables(file[1])
 
+    save_file_tmp(name: 'pascal', file: file)
+
     # file.each do |line|
     #   line.remove("\n")
     #   int += 1 if line.include?('int')

@@ -28,7 +28,6 @@ module Moss
         variables = _file[(_file.index('VAR') + 1)..-1]
         variables.each do |line|
           linha = line.split(',')
-          binding.pry
         end
       end
     end

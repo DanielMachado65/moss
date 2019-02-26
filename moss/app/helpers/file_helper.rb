@@ -3,22 +3,18 @@ module Moss
   class App
     module FileHelper
 
+      # leitura de Base64
       def read_file64(params)
         json = JSON.parse(params)
         return Base64.decode64(json['content']).to_s
       end
 
-      def save_file_tmp(params)
-        # decodificar o arquivo
-        json = JSON.parse(params)
-        decoded_data = Base64.decode64(json['content'])
-
-        # criar pasta temporária
+      # criar pasta temporária
+      def save_file_tmp(article = {})
         tmp = Dir.tmpdir()
-        file = File.new(".#{tmp}/#{json['name']}-#{generate_hash}.pas", 'w')
+        file = File.new(".#{tmp}/#{generate_hash}.pas", 'w')
 
-        # escreve no arquivo
-        file.write(decoded_data.force_encoding('UTF-8'))
+        file.write(article[:file])
         file.close
       end
 
