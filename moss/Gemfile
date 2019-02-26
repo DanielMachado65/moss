@@ -26,6 +26,18 @@ gem 'dm-aggregates'
 gem 'dm-types'
 gem 'dm-core'
 
+gem 'pry'
+gem 'shrine'
+
+# configs
+gem 'jbuilder', '~> 2.0'
+gem 'rack-cors'
+
+# send files
+# gem 'paperclip'
+gem 'carrierwave'
+
+
 # Test requirements
 gem 'mocha', :group => 'test', :require => false
 
